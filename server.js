@@ -29,25 +29,45 @@ app.get("/add", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
 });
 
+app.get("/add", function (req, res) {
+    res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
 // Displays all characters
-app.get("/api/characters", function (req, res) {
-    return res.json(characters);
+app.get("/api/clients", function (req, res) {
+    return res.json(clients);
 });
 
 // Displays a single character, or returns false
-app.get("/api/characters/:character", function (req, res) {
-    var chosen = req.params.character;
+app.get("/api/clients/:character", function (req, res) {
+    var chosen = req.params.clients;
 
     console.log(chosen);
 
-    for (var i = 0; i < characters.length; i++) {
-        if (chosen === characters[i].routeName) {
-            return res.json(characters[i]);
+    for (var i = 0; i < clients.length; i++) {
+        if (chosen === clients[i].routeName) {
+            return res.json(clients[i]);
         }
     }
 
     return res.json(false);
 });
+
+app.post("/api/clients", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body-parser middleware
+    var newclient = req.body;
+  
+    // Using a RegEx Pattern to remove spaces from newCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    newclient.routeName = newclient.name.replace(/\s+/g, "").toLowerCase();
+  
+    console.log(newclient);
+  
+    clients.push(newclient);
+  
+    res.json(newclient);
+  });
 
 var reservations = [];
 // var waitingList = [];
