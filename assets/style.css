@@ -1,0 +1,49 @@
+h1 {
+    position: relative;
+    z-index: 500;
+    vertical-align:top;
+    font-size: 6em;
+    font-family: 'Francois One', sans-serif;
+    margin-top: 50px;
+    margin-bottom:-175px;
+}
+h4 {
+    margin-bottom: 25px;
+}
+#displays {
+    margin-bottom: 50px;
+}
+.card {
+    margin: 25px 0px 0px 25px;
+}
+.panel {
+    margin: 50px;
+}
+.jumbotron>hr {
+    border-top-color: #d5d5d5;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+#fire {
+    position: relative;
+    display: block;
+    font-size: 10rem;
+    color: rgb(255, 0, 0, 0.3);
+    margin-top: -130px;
+    margin-right: -250px;
+    /* opacity: 0.3; */
+    z-index: 1;
+    max-width: 100%;
+}
+
+#utensils {
+    position: relative;
+    display: block;
+    font-size: 15rem;
+    color: silver;
+    /* opacity: 0.3; */
+    z-index: 1;
+}
