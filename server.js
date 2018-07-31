@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-require("./routes/htmlRoutes")(app);
+// require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, function () {
     console.log("App listing on PORT: " + PORT);
@@ -22,15 +22,15 @@ var reservations = [];
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
+    res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
-app.get("/add", function (req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"));
+app.get("/tables", function (req, res) {
+    res.sendFile(path.join(__dirname, "/public/table.html"));
 });
 
-app.get("/add", function (req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
+app.get("/reserve", function (req, res) {
+    res.sendFile(path.join(__dirname, "/public/reserve.html"));
 });
 
 // Displays all characters
