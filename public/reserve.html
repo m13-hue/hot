@@ -9,34 +9,93 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Francois+One" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Francois+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
 </head>
 
 <body>
-        <div class="jumbotron jumbotron-billboard" id=jumbotron1>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h1 id="hotTable">Hot Table</h1>
-                            <i class="fas fa-utensils" id="utensils"></i>
-                            <i class="fab fa-gripfire" id="fire"></i>
-                            <hr>
-                            <h4>We only have 5 tables! Book your seat before they all are gone!</h4>
-                            <div class="text-center">
-                                <a href="/tables">
-                                    <button type="button" class="btn btn-lg btn-primary">
-                                        <i class="fa fa-table" aria-hidden="true"></i> View Tables</button>
-                                </a>
-                                <a href="/reserve">
-                                    <button type="button" class="btn btn-lg btn-danger">
-                                        <i class="fa fa-credit-card"></i> Make Reservation</button>
-                                </a>
-                            </div>
-                        </div>
+
+    <style>
+        h1 {
+            position: relative;
+            z-index: 500;
+            vertical-align: top;
+            font-size: 6em;
+            font-family: 'Francois One', sans-serif;
+            margin-top: 50px;
+            margin-bottom: -175px;
+        }
+
+        h4 {
+            margin-bottom: 25px;
+        }
+
+        #displays {
+            margin-bottom: 50px;
+        }
+
+        .card {
+            margin: 25px 0px 0px 25px;
+        }
+
+        .panel {
+            margin: 50px;
+        }
+
+        .jumbotron>hr {
+            border-top-color: #d5d5d5;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+        #fire {
+            position: relative;
+            display: block;
+            font-size: 10rem;
+            color: rgb(255, 0, 0, 0.3);
+            margin-top: -130px;
+            margin-right: -250px;
+            /* opacity: 0.3; */
+            z-index: 1;
+            max-width: 100%;
+        }
+
+        #utensils {
+            position: relative;
+            display: block;
+            font-size: 15rem;
+            color: silver;
+            /* opacity: 0.3; */
+            z-index: 1;
+        }
+    </style>
+    <div class="jumbotron jumbotron-billboard" id=jumbotron1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 id="hotTable">Hot Table</h1>
+                    <i class="fas fa-utensils" id="utensils"></i>
+                    <i class="fab fa-gripfire" id="fire"></i>
+                    <hr>
+                    <h4>We only have 5 tables! Book your seat before they all are gone!</h4>
+                    <div class="text-center">
+                        <a href="/tables">
+                            <button type="button" class="btn btn-lg btn-primary">
+                                <i class="fa fa-table" aria-hidden="true"></i> View Tables</button>
+                        </a>
+                        <a href="/reserve">
+                            <button type="button" class="btn btn-lg btn-danger">
+                                <i class="fa fa-credit-card"></i> Make Reservation</button>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
     <div class="container center-text">
         <div class="panel panel-default">
             <h2>Reserve your table!</h2>
