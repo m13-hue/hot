@@ -136,9 +136,10 @@
                 email: $("#email").val().trim(),
                 uniqueId: $("#uniqueId").val().trim()
             };
+            console.log(newReservation)
 
             // Question: What does this code do??
-            $.post("/api/reserve", newReservation)
+            $.post("/api/clients", newReservation)
                 .then(function (data) {
                     console.log("add.html", data);
                     alert("Adding Reservation");
